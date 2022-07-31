@@ -1,6 +1,5 @@
 import { useContext, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Dashboard from "./Components/Pages/JS/Dashboard";
@@ -17,7 +16,7 @@ import { userSignInContext } from "./Components/Context/SignInContext";
 
 function App() {
   const {setUserData} = useContext(userSignInContext);
-  
+
   useEffect(()=>{
     const reload = async() =>{
       try{
