@@ -17,7 +17,7 @@ const SignUpPage = () => {
       try{
         e.preventDefault()
         const {username, email, password } = userInfo
-        const response = await axios.post("http://localhost:5001/user/registration",{
+        const response = await axios.post("https://football-quiz-backend.herokuapp.com/user/registration",{
           username,email,password
       });
         if(response.status === 422){

@@ -17,11 +17,11 @@ import { userSignInContext } from "./Components/Context/SignInContext";
 
 function App() {
   const {setUserData} = useContext(userSignInContext);
-
+  
   useEffect(()=>{
     const reload = async() =>{
       try{
-         const response = await axios.post("http://localhost:5001/user/userInfo",{ headers: { authorization:localStorage.getItem('token') }
+         const response = await axios.post("https://football-quiz-backend.herokuapp.com/user/userInfo",{ headers: { authorization:localStorage.getItem('token') }
        })
        if(response.status === 200){
           setUserData(response.data.userData)

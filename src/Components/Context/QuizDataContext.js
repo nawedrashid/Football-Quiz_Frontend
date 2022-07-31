@@ -28,7 +28,7 @@ const QuizDataContext = ({children}) => {
     const [quiz, setQuizes] = useState(InitialQuizContext.quiz)
     useEffect(() =>{
         const getQuizData = async() => {
-            const quizResponse = await axios.get("http://localhost:5001/quiz")
+            const quizResponse = await axios.get("https://football-quiz-backend.herokuapp.com/quiz")
             setQuizes(quizResponse.data.getQuizData)
         }
         getQuizData()

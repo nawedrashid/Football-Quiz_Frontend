@@ -11,7 +11,7 @@ const Profile = () => {
 
   useEffect(() => {
     const getUserData = async () => {
-      const response = await axios.get(`http://localhost:5001/user/${userId}`);
+      const response = await axios.get(`https://football-quiz-backend.herokuapp.com/user/${userId}`);
       setuserData(response.data.findUser);
       console.log(response.data.findUser);
     };
