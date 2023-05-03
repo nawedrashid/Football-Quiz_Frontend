@@ -10,7 +10,7 @@ const Dashboard = () => {
     const dashboardData = async () => {
       try {
         const response = await axios.get(
-          "https://football-quiz-backend.herokuapp.com/quiz/quizDashboard"
+          "https://quiz-app-backend-1m2i.onrender.com/quiz/quizDashboard"
         );
         if (response) setAllUsers(response.data.getUserData);
       } catch (error) {

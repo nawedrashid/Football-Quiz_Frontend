@@ -22,7 +22,7 @@ const SignInContext = ({ children }) => {
     const Login = async(e,email,password ) => {
         try{
             e.preventDefault();
-            const response = await axios.post("https://football-quiz-backend.herokuapp.com/user/login",{
+            const response = await axios.post("https://quiz-app-backend-1m2i.onrender.com/user/login",{
                 email,
                 password
             });
