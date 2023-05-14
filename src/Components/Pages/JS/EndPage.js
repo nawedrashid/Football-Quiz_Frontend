@@ -15,7 +15,7 @@ const EndPage = () => {
   useEffect(() => {
     const scoreUpdate = async() =>{
         try{
-            const response = await axios.post(`https://quiz-app-backend-1m2i.onrender.com/user/${userData._id}/topic/${topic}/score/${score}`)
+            const response = await axios.post(`https://football-quiz-backend.vercel.app/user/${userData._id}/topic/${topic}/score/${score}`)
             if(response.status === 200)
                 toast(" Score Updated ")
         }catch(error){

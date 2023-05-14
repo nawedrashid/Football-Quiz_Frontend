@@ -10,7 +10,7 @@ const Dashboard = () => {
     const dashboardData = async () => {
       try {
         const response = await axios.get(
-          "https://quiz-app-backend-1m2i.onrender.com/quiz/quizDashboard"
+          "https://football-quiz-backend.vercel.app/quiz/quizDashboard"
         );
         if (response) setAllUsers(response.data.getUserData);
       } catch (error) {
